@@ -1,0 +1,83 @@
+{
+	"variables": [],
+	"info": {
+		"name": "TagsBackend",
+		"_postman_id": "c0e75d17-662d-d577-6822-4791c6047b63",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createLink",
+			"request": {
+				"url": "http://admin:admin@localhost:8080/links",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"url\": \"https://www.bbc.com/news/uk-politics-49251257\",\n\t\"accountId\": \"1\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getAllLinks",
+			"request": {
+				"url": "http://localhost:8080/links/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getTags",
+			"request": {
+				"url": "http://localhost:8080/tags/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "testCrawller",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/crawler?url=https://en.wikipedia.org/wiki/Korea",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crawler"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "https://en.wikipedia.org/wiki/Korea",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
